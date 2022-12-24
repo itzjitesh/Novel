@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+  <h1><%= books.title %></h1>
+
+  <h2><em>Main Theme</em></h2>
+  <p><b><%= books.mainTheme %></b></p>
+
+  <h2><em>Bullet Points </em></h2>
+  <h5 contenteditable="true"><%= books.bulletPoint %></h5>
+
+  <h2><em>Description </em></h2>
+  <p><%= books.description %></p>
+
+  <form action="/v1/api/books/update/<%= books.title %>" method="get">
+    <button type="submit" class="btn btn-primary ">Update</button>
+  </form>
+
+  <form action="/v1/api/books/delete/<%= books.title %>" method="post">
+    <button type="submit" class="btn btn-danger delete-book">Delete</button>
+  </form>
+
+
+<%- include("partials/footer") -%>
+    
+

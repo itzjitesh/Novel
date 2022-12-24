@@ -1,0 +1,27 @@
+<%- include("partials/header") -%>
+
+    <h1>Update Your Book</h1>
+
+    <form action="/v1/api/books/update/<%= books.title %>" method="post" class="upload-form">
+
+        <div class="form-group">
+
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="<%= books.title %>" value="<%= books.title %>" required="true">
+
+            <label for="description">description</label>
+            <textarea name="description" id="description" cols="30" rows="10" class="form-control"><%= books.description %></textarea>
+
+            <label for="bulletPoint">Bullet Points</label>
+            <textarea name="bulletPoint" id="bulletPoint" cols="30" rows="10" class="form-control"><%= books.bulletPoint %></textarea>
+
+            <label for="mainTheme">Main Theme</label>
+            <textarea type="text" id="mainTheme" name="mainTheme" cols="30" rows="5" class="form-control"><%= books.mainTheme %></textarea>
+        </div>
+        
+        <button type="submit" id="btn" class="btn btn-primary active">Update Now</button>
+    </form>
+
+<%- include("partials/footer") -%>
+    
+
