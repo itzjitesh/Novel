@@ -1,8 +1,5 @@
 import winston from "winston";
 import "winston-mongodb";
-import config from "config";
-
-const db = config.get("db");
 
 process.on("uncaughtException", async(ex)=>{
     logger.log("error", "WE GOT AN UNCAUGHT EXCEPTION.");

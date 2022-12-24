@@ -2,7 +2,9 @@ import mongoose from "mongoose";
 import Joi from "joi";
 import validator from "validator";
 import jwt from "jsonwebtoken";
-import config from "config";
+import dotenv from "dotenv";
+
+dotenv.config({ path: "./config.env"});
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -43,7 +45,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.generateAuthToken = function(){
-    const token = jwt.sign({_id: this._id, isAdmin: this.isAdmin}, config.get("jwtPrivateKey"));
+    const token = jwt.sign({_id: this._id, isAdmin: this.isAdmin}, process.env.JWT_PRIVATEKEY);
     return token;
 }
 
