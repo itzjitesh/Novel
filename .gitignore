@@ -132,4 +132,4 @@ dist
 
 config/
 
-public/image/
+# public/image/
