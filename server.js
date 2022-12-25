@@ -3,7 +3,7 @@ import logger from "./logger.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-dotenv.config({ path: "./config.env"});
+dotenv.config({ path: "./config.env"}); 
 
 const port = process.env.PORT || 3000;
 
@@ -14,14 +14,15 @@ mongoose.set('strictQuery', false);
 mongoose.connect(db)
     .then(()=>{
         logger.log("info", "connected to mongodb...");
+        app.listen(port, ()=>{
+            logger.log("info", `server is running at ${port}`);
+        });
     })
     .catch(err=>{
         logger.log("error", err);
     });
 
-app.listen(port, ()=>{
-    logger.log("info", `server is running at ${port}`);
-});
+
 
 
 
