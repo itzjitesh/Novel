@@ -13,8 +13,10 @@ app.use(cookieParser());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use("/v1/api/users", routes);
-app.use("/v1/api/books", routes);
+// app.use("/v1/api/users", routes);
+// app.use("/v1/api/books", routes);
+
+app.use("/", routes);
 
 export default app;
 
