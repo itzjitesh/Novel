@@ -14,7 +14,7 @@ mongoose.set('strictQuery', false);
 mongoose.connect(db)
     .then(()=>{
         logger.log("info", "connected to mongodb...");
-        console.log("running");
+        // console.log("running");
         app.listen(port, ()=>{
             logger.log("info", `server is running at ${port}`);
         });
