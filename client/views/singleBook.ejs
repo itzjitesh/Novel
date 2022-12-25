@@ -11,11 +11,11 @@
   <h2><em>Description </em></h2>
   <p><%= books.description %></p>
 
-  <form action="/v1/api/books/update/<%= books.title %>" method="get">
+  <form action="/update/<%= books.title %>" method="get">
     <button type="submit" class="btn btn-primary ">Update</button>
   </form>
 
-  <form action="/v1/api/books/delete/<%= books.title %>" method="post">
+  <form action="/delete/<%= books.title %>" method="post">
     <button type="submit" class="btn btn-danger delete-book">Delete</button>
   </form>
 

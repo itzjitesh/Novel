@@ -21,7 +21,7 @@ const postUploadBook = asyncMiddleware(async(req, res)=>{
     });
 
     await book.save(); 
-    res.redirect("/v1/api/books/read");    
+    res.redirect("/");    
 });
 
 const getUploadBook = asyncMiddleware(async(req, res)=>{
@@ -70,7 +70,7 @@ const updateBook = asyncMiddleware(async(req, res)=>{
 });
 
 const getUpdatedBookRead = asyncMiddleware(async(req, res)=>{
-    res.redirect("/v1/api/books/read");
+    res.redirect("/");
 });
 
 const getUpdateBook = asyncMiddleware(async(req, res)=>{

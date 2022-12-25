@@ -4,7 +4,7 @@
   <h1><%= books[i].title %></h1>
   <p>
     <%= books[i].mainTheme.substring(0,100) + "..." %>
-    <a href="/v1/api/books/posts/<%= books[i].title %>">Get the Full Summary</a>
+    <a href="/posts/<%= books[i].title %>">Get the Full Summary</a>
   </p>
 <% }; %>
 

@@ -43,7 +43,7 @@ const postSignup = asyncMiddleware(async(req, res)=>{
             httpOnly: true
         });
 
-        res.redirect("/v1/api/users/login");
+        res.redirect("/login");
         }
     });  
 });
@@ -73,7 +73,7 @@ const postLogin = asyncMiddleware(async(req, res)=>{
         httpOnly: true
     });
     
-    res.redirect("/v1/api/books/read");
+    res.redirect("/");
 });
 
 export default {
